@@ -1,0 +1,28 @@
+<div style="padding:50px; width:50%">
+    <span>Editable</span>
+    <expandable-textarea id="testNote1"
+                         [(value)]="notes"
+                         placeholder="Enter Notes..."
+                         classes="form-control"
+                         height="90px"
+                         [readonly]="false"
+                         name="TestNote1">
+    </expandable-textarea>
+
+    <br/><br/>
+
+    <span>Read-only</span>
+    <expandable-textarea id="testNote2"
+                         [(value)]="notes"
+                         placeholder="Enter Notes..."
+                         classes="form-control"
+                         height="90px"
+                         [readonly]="true"
+                         name="TestNote2">
+    </expandable-textarea>
+    
+    <br/>
+    <hr/>
+
+    <span><strong>notes:</strong> {{notes}}</span>
+</div>

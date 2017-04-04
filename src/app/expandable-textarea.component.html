@@ -1,0 +1,27 @@
+﻿<div class="">
+	<div class="">
+		<div class="btn btn-default btn-md expandbutton" (click)="toggleExpand()" title="Expand">
+			<i class="fa fa-expand"></i>
+		</div>
+		<textarea class="expandabletextarea"
+				  [value]="value"
+				  (input)="valueChanged($event.target.value)"
+				  (dblclick)="toggleExpand()"
+				  [placeholder]="placeholder"
+				  [readonly]="readonly"
+				  title="Double click to expand"></textarea>
+	</div>
+	<div class="animate-if" *ngIf="isExpanded">
+		<textarea class="expandedtextarea"
+				  [value]="value"
+				  (input)="valueChanged($event.target.value)"
+				  (dblclick)="toggleExpand()"
+				  (keydown)="handleKeyPress($event)"
+				  [placeholder]="placeholder"
+				  [readonly]="readonly"
+				  title="Double click to shrink"></textarea>
+		<div class="btn btn-default btn-md closebutton" (click)="toggleExpand()" title="Shrink">
+			<i class="fa fa-compress"></i>
+		</div>
+	</div>
+</div>
